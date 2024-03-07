@@ -1,0 +1,1 @@
+C:\Users\tom-d\OneDrive\Bureau\TP_RUST\exquit_corpse\target\debug\stdio_corpse.exe: C:\Users\tom-d\OneDrive\Bureau\TP_RUST\exquit_corpse\src\bin\stdio_corpse.rs C:\Users\tom-d\OneDrive\Bureau\TP_RUST\exquit_corpse\src\lib.rs

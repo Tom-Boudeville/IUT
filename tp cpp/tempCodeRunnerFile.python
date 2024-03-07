@@ -1,0 +1,11 @@
+import pyautogui as p
+import pyperclip
+
+photo = 'C:\Users\tom-d\OneDrive\Bureau'
+renaud = open(photo)
+pyperclip.copy(renaud)
+p.click(20,800)
+p.click(800, 1000)
+while True:
+    pyperclip.paste()
+    p.press('enter')

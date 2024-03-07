@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>La filmothèque</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      type="text/css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div id="shell" class="bg-body-tertiary">
+      <div id="header" >
+        <nav class="navbar navbar-expand-md">
+          <div class="container">
+            <a class="navbar-brand" href="#"
+              ><img class="w-50" src="images/logo-h.png"
+            /></a>
+            <button
+              class="navbar-toggler ms-auto-md"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                  <a class="nav-link active" href="#">Accueil</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Tous</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Genres
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Aventure</a></li>
+                    <li><a class="dropdown-item" href="#">Policier</a></li>
+                    <li><a class="dropdown-item" href="#">Horreur</a></li>
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Aventure</a></li>
+                    <li><a class="dropdown-item" href="#">Policier</a></li>
+                    <li><a class="dropdown-item" href="#">Horreur</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    href="#"
+                    class="nav-link dropdown-toggle"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                    >Acteurs</a
+                  >
+                  <div class="dropdown-menu dropdown-menu-end">
+                    <form class="d-flex" role="search">
+                      <input
+                        id="actor-search"
+                        class="form-control mx-2"
+                        type="search"
+                        placeholder="Nom acteur"
+                        aria-label="Nom acteur"
+                      />
+                    </form>
+                    <ul class="me-0 ps-0">
+                      <li class="dropdown-item">
+                        <span class="link">Bruce Willis</span>
+                      </li>
+                      <li class="dropdown-item">
+                        <span>Robert De Niro</span>
+                      </li>
+                      <li class="dropdown-item">
+                        <span class="link">Denzel Washington</span>
+                      </li>
+                      <li class="dropdown-item">
+                        <span class="link">Bruce Willis</span>
+                      </li>
+                      <li class="dropdown-item">
+                        <span class="link">Robert De Niro</span>
+                      </li>
+                      <li class="dropdown-item">
+                        <span class="link">Denzel Washington</span>
+                      </li>
+                      <li class="dropdown-item">
+                        <span class="link">Bruce Willis</span>
+                      </li>
+                      <li class="dropdown-item">
+                        <span class="link">Robert De Niro</span>
+                      </li>
+                      <li class="dropdown-item">
+                        <span class="link">Denzel Washington</span>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="nav-item search-box">
+                  <form class="d-flex" role="search">
+                    <button class="btn-search">
+                      <i class="fas fa-search"></i>
+                    </button>
+                    <input
+                      type="text"
+                      class="input-search"
+                      placeholder="Recherche..."
+                    />
+                  </form>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <div id="carousel" class="container">
+        <div
+          id="selectionCarousel"
+          class="carousel slide"
+          data-bs-ride="carousel"
+          data-bs-interval="5000"
+        >
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#selectionCarousel"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#selectionCarousel"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#selectionCarousel"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            ></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img
+                class="img-fluid"
+                src="https://www.themoviedb.org/t/p/w1920_and_h800_multi_faces/jXJxMcVoEuXzym3vFnjqDW4ifo6.jpg"
+                class="d-block w-100"
+                alt="..."
+              />
+              <div class="blur">&nbsp;</div>
+              <div class="poster">
+                <img
+                  class="img-fluid"
+                  src="https://www.themoviedb.org/t/p/w300_and_h450_bestv2/7uqsoZYrYiXJqR14wROzuVphkas.jpg"
+                />
+              </div>
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Aquaman et le Royaume perdu (2023)</h5>
+                <p>Que les océans se déchaînent.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img
+                class="img-fluid"
+                src="https://www.themoviedb.org/t/p/w1920_and_h800_multi_faces/xuCHkaxkkm9pPum1SByC0dhvR2U.jpg"
+                class="d-block w-100"
+                alt="..."
+              />
+              <div class="blur">&nbsp;</div>
+              <div class="poster">
+                <img
+                  class="img-fluid"
+                  src="https://www.themoviedb.org/t/p/w300_and_h450_bestv2/mj98hl3XsRcxYdw99arNavsSBDP.jpg"
+                />
+              </div>
+              <div class="carousel-caption d-none d-md-block">
+                <h5>What If...? (2021)</h5>
+                <p>Une seule question peut tout changer.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img
+                class="img-fluid"
+                src="https://www.themoviedb.org/t/p/w1920_and_h800_multi_faces/sRLC052ieEzkQs9dEtPMfFxYkej.jpg"
+                class="d-block w-100"
+                alt="..."
+              />
+              <div class="blur">&nbsp;</div>
+              <div class="poster">
+                <img
+                  class="img-fluid"
+                  src="https://www.themoviedb.org/t/p/w300_and_h450_bestv2/jKLRbmLu6QrGvWq1kmfFLJw8LN8.jpg"
+                />
+              </div>
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Rebel Moon - Partie 1 : Enfant du feu (2023)</h5>
+                <p>La guerre n'épargnera aucun monde.</p>
+              </div>
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#selectionCarousel"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#selectionCarousel"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+      <div id="content" class="container" >
+        <div class="box container-fluid">
+          <div class="head row justify-between align-items-center">
+            <h2 class="col">Plus récents</h2>
+            <p class="col text-end"><a href="#">Tous</a></p>
+          </div>
+          <div class="row row-cols-md-6 row-cols-sm-3 row-cols-2" >
+            <div class="movie col">
+              <div class="movie-image ">
+                <span class="play"><span class="name">X-MAN</span></span>
+                <a href="#"><img class="img-fluid  img-thumbnail" src="images/movie1.jpg" alt="" /></a>
+              </div>
+              <div class="rating">
+                <div class="stars">
+                  <div class="stars-in"></div>
+                </div>
+                <span class="comments">12</span>
+              </div>
+            </div>
+            <div class="movie col">
+              <div class="movie-image">
+                <span class="play"><span class="name">SPIDER MAN 2</span></span>
+                <a href="#"><img  class="img-fluid img-thumbnail" src="images/movie2.jpg" alt="" /></a>
+              </div>
+              <div class="rating">
+                <div class="stars">
+                  <div class="stars-in"></div>
+                </div>
+                <span class="comments">12</span>
+              </div>
+            </div>
+            <div class="movie col">
+              <div class="movie-image">
+                <span class="play"><span class="name">SPIDER MAN 3</span></span>
+                <a href="#"><img  class="img-fluid img-thumbnail" src="images/movie3.jpg" alt="" /></a>
+              </div>
+              <div class="rating">
+                <div class="stars">
+                  <div class="stars-in"></div>
+                </div>
+                <span class="comments">12</span>
+              </div>
+            </div>
+            <div class="movie col">
+              <div class="movie-image">
+                <span class="play"><span class="name">VALKYRIE</span></span>
+                <a href="#"><img  class="img-fluid img-thumbnail" src="images/movie4.jpg" alt="" /></a>
+              </div>
+              <div class="rating">
+                <div class="stars">
+                  <div class="stars-in"></div>
+                </div>
+                <span class="comments">12</span>
+              </div>
+            </div>
+            <div class="movie col">
+              <div class="movie-image">
+                <span class="play"><span class="name">GLADIATOR</span></span>
+                <a href="#"><img  class="img-fluid img-thumbnail" src="images/movie5.jpg" alt="" /></a>
+              </div>
+              <div class="rating">
+                <div class="stars">
+                  <div class="stars-in"></div>
+                </div>
+                <span class="comments">12</span>
+              </div>
+            </div>
+            <div class="movie col">
+              <div class="movie-image">
+                <span class="play"><span class="name">ICE AGE</span></span>
+                <a href="#"><img  class="img-fluid img-thumbnail" class="img-fluid img-thumbnail"src="images/movie6.jpg" alt="" /></a>
+              </div>
+              <div class="rating">
+                <div class="stars">
+                  <div class="stars-in"></div>
+                </div>
+                <span class="comments">12</span>
+              </div>
+            </div>
+            <div class="cl">&nbsp;</div>
+          </div>
+        </div>
+        <div class="box container-fluid">
+          <div class="head row justify-between">
+            <h2 class="col">Mieux notés</h2>
+            <p class="col text-end"><a href="#">Tous</a></p>
+          </div>
+          <div class="row row-cols-md-6 row-cols-sm-3 row-cols-2 ">
+            <div class="movie">
+              <div class="movie-image">
+                <span class="play"><span class="name">TRANSFORMERS</span></span>
+                <a href="#"><img  class="img-fluid img-thumbnail" src="images/movie7.jpg" alt="" /></a>
+              </div>
+              <div class="rating">
+                <div class="stars">
+                  <div class="stars-in"></div>
+                </div>
+                <span class="comments">12</span>
+              </div>
+            </div>
+            <div class="movie">
+              <div class="movie-image">
+                <span class="play"><span class="name">MAGNETO</span></span>
+                <a href="#"><img  class="img-fluid img-thumbnail" src="images/movie8.jpg" alt="" /></a>
+              </div>
+              <div class="rating">
+                <div class="stars">
+                  <div class="stars-in"></div>
+                </div>
+                <span class="comments">12</span>
+              </div>
+            </div>
+            <div class="movie">
+              <div class="movie-image">
+                <span class="play"
+                  ><span class="name">KUNG FU PANDA</span></span
+                >
+                <a href="#"><img  class="img-fluid img-thumbnail" src="images/movie9.jpg" alt="" /></a>
+              </div>
+              <div class="rating">
+                <div class="stars">
+                  <div class="stars-in"></div>
+                </div>
+                <span class="comments">12</span>
+              </div>
+            </div>
+            <div class="movie">
+              <div class="movie-image">
+                <span class="play"><span class="name">EAGLE EYE</span></span>
+                <a href="#"><img  class="img-fluid img-thumbnail" src="images/movie10.jpg" alt="" /></a>
+              </div>
+              <div class="rating">
+                <div class="stars">
+                  <div class="stars-in"></div>
+                </div>
+                <span class="comments">12</span>
+              </div>
+            </div>
+            <div class="movie">
+              <div class="movie-image">
+                <span class="play"><span class="name">NARNIA</span></span>
+                <a href="#"><img class="img-fluid img-thumbnail" src="images/movie11.jpg" alt="" /></a>
+              </div>
+              <div class="rating">
+                <div class="stars">
+                  <div class="stars-in"></div>
+                </div>
+                <span class="comments">12</span>
+              </div>
+            </div>
+            <div class="movie">
+              <div class="movie-image">
+                <span class="play"
+                  ><span class="name">ANGELS &amp; DEMONS</span></span
+                >
+                <a href="#"><img  class="img-fluid img-thumbnail" src="images/movie12.jpg" alt="" /></a>
+              </div>
+              <div class="rating">
+                <div class="stars">
+                  <div class="stars-in"></div>
+                </div>
+                <span class="comments">12</span>
+              </div>
+            </div>
+            <div class="cl">&nbsp;</div>
+          </div>
+        </div>
+        <div class="box container-fluid">
+          <div class="head  row justify-between">
+            <h2 class="col">Plus commentés</h2>
+            <p class="col text-end"><a href="#">Tous</a></p>
+          </div>
+          <div class="row row-cols-md-6 row-cols-sm-3 row-cols-2 ">
+            <div class="movie">
+              <div class="movie-image">
+                <span class="play"><span class="name">HOUSE</span></span>
+                <a href="#"><img class="img-fluid img-thumbnail" src="images/movie13.jpg" alt="" /></a>
+              </div>
+              <div class="rating">
+                <div class="stars">
+                  <div class="stars-in"></div>
+                </div>
+                <span class="comments">12</span>
+              </div>
+            </div>
+            <div class="movie">
+              <div class="movie-image">
+                <span class="play"><span class="name">VACANCY</span></span>
+                <a href="#"><img  class="img-fluid img-thumbnail" src="images/movie14.jpg" alt="" /></a>
+              </div>
+              <div class="rating">
+                <div class="stars">
+                  <div class="stars-in"></div>
+                </div>
+                <span class="comments">12</span>
+              </div>
+            </div>
+            <div class="movie">
+              <div class="movie-image">
+                <span class="play"><span class="name">MIRRORS</span></span>
+                <a href="#"><img  class="img-fluid img-thumbnail" src="images/movie15.jpg" alt="" /></a>
+              </div>
+              <div class="rating">
+                <div class="stars">
+                  <div class="stars-in"></div>
+                </div>
+                <span class="comments">12</span>
+              </div>
+            </div>
+            <div class="movie">
+              <div class="movie-image">
+                <span class="play"><span class="name">THE KINGDOM</span></span>
+                <a href="#"><img  class="img-fluid img-thumbnail" src="images/movie16.jpg" alt="" /></a>
+              </div>
+              <div class="rating">
+                <div class="stars">
+                  <div class="stars-in"></div>
+                </div>
+                <span class="comments">12</span>
+              </div>
+            </div>
+            <div class="movie">
+              <div class="movie-image">
+                <span class="play"><span class="name">MOTIVES</span></span>
+                <a href="#"><img  class="img-fluid img-thumbnail" src="images/movie17.jpg" alt="" /></a>
+              </div>
+              <div class="rating">
+                <div class="stars">
+                  <div class="stars-in"></div>
+                </div>
+                <span class="comments">12</span>
+              </div>
+            </div>
+            <div class="movie">
+              <div class="movie-image">
+                <span class="play"><span class="name">THE PRESTIGE</span></span>
+                <a href="#"><img class="img-fluid img-thumbnail"  src="images/movie18.jpg" alt="" /></a>
+              </div>
+              <div class="rating">
+                <div class="stars">
+                  <div class="stars-in"></div>
+                </div>
+                <span class="comments">12</span>
+              </div>
+            </div>
+            <div class="cl">&nbsp;</div>
+          </div>
+        </div>
+      </div>
+      <div id="footer" class="container bg-dark">
+        <p class="text-end">
+          Copyright &copy; 2023 <a href="#">La filmothèque</a> - All Rights
+          Reserved
+        </p>
+        <div style="clear: both"></div>
+      </div>
+    </div>
+  </body>
+</html>

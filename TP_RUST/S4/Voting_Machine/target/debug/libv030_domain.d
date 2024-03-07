@@ -1,0 +1,1 @@
+C:\Users\tom-d\OneDrive\Bureau\TP_RUST\S4\Voting_Machine\target\debug\libv030_domain.rlib: C:\Users\tom-d\OneDrive\Bureau\TP_RUST\S4\Voting_Machine\v030_domain\src\domain.rs C:\Users\tom-d\OneDrive\Bureau\TP_RUST\S4\Voting_Machine\v030_domain\src\lib.rs

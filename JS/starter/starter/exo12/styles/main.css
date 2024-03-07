@@ -1,0 +1,74 @@
+body {
+  padding-top: 50px;
+}
+form {
+  width: 50%;
+  margin: 0 auto;
+}
+.form_col {
+  display: inline-block;
+  margin-right: 15px;
+  padding: 3px 0px;
+  width: 200px;
+  min-height: 1px;
+  text-align: right;
+}
+span > .form_col {
+  margin: 0;
+  width: auto;
+}
+
+input {
+  padding: 2px;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  outline: none; /* Retire les bordures appliquées par certains navigateurs (Chrome notamment) lors du focus des éléments <input> */
+  margin-right: 5px;
+}
+
+input:focus {
+  border-color: rgba(82, 168, 236, 0.75);
+  box-shadow: 0 0 8px rgba(82, 168, 236, 0.5);
+}
+
+.correct {
+  border-color: rgba(68, 191, 68, 0.75);
+}
+
+.correct:focus {
+  border-color: rgba(68, 191, 68, 0.75);
+  box-shadow: 0 0 8px rgba(68, 191, 68, 0.5);
+}
+
+.incorrect {
+  border-color: rgba(191, 68, 68, 0.75);
+}
+
+.incorrect:focus {
+  border-color: rgba(191, 68, 68, 0.75);
+  box-shadow: 0 0 8px rgba(191, 68, 68, 0.5);
+}
+
+.tooltip {
+  display: inline-block;
+  margin-left: 20px;
+  padding: 2px 4px;
+  border: 1px solid #555;
+  background-color: #ccc;
+  border-radius: 4px;
+}
+.buttons {
+  text-align: center;
+  margin: 10px 0;
+}
+.buttons input {
+  background-color: #ccc;
+  border-radius: 4px;
+  width: 30%;
+  padding: 2px;
+  cursor: pointer;
+}
+
+.buttons input:hover {
+  background-color: #eee;
+}

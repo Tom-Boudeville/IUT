@@ -1,0 +1,568 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>La filmothèque</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      type="text/css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.js"></script>
+    <script src="http://filmotheque.e-mingo.net/scripts/toasterb.min.js"></script>
+  </head>
+  <body>
+    <div id="shell" class="container max-w-screen-lg mx-auto px-10">
+      <div id="header">
+        <div class="flex flex-row">
+          <div id="brand" class="basis-1/4 md:basis-1/3 h-28">
+            <a href="#" id="logo" class="h-full w-full text-start">
+              <span
+                class="block w-full h-full bg-contain p-6 bg-no-repeat bg-left"
+              >
+              </span>
+            </a>
+          </div>
+          <div
+            id="navigation"
+            class="basis-3/4 md:basis-2/3 flex items-center justify-end"
+          >
+            <ul class="flex text-xl justify-between">
+              <li id="home" class="link" target-id="home">
+                <a class="active mx-2 uppercase " href="#">Accueil</a>
+              </li>
+              <li id="all" class="mx-2 uppercase link" target-id="all">
+                <a href="#">Tous</a>
+              </li>
+              <li class="mx-2 uppercase">
+                <a
+                  href="#"
+                  id="dropdownNavbarLink"
+                  data-dropdown-toggle="genreDropdown"
+                  data-dropdown-trigger="hover"
+                  class="text-center inline-flex items-center"
+                >
+                  Genres
+                  <svg
+                    class="w-2.5 h-2.5 ms-3"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 10 6"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="m1 1 4 4 4-4"
+                    />
+                  </svg>
+                </a>
+                <div
+                  id="genreDropdown"
+                  class="container max-w-screen-lg rounded-lg shadow z-10 hidden p-3"
+                >
+                  <ul
+                    class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 justify-center uppercase text-sm"
+                  >
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Aventure</a></li>
+                    <li><a href="#">Policier</a></li>
+                    <li><a href="#">Horreur</a></li>
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Aventure</a></li>
+                    <li><a href="#">Policier</a></li>
+                    <li><a href="#">Horreur</a></li>
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Aventure</a></li>
+                    <li><a href="#">Policier</a></li>
+                    <li><a href="#">Horreur</a></li>
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Aventure</a></li>
+                    <li><a href="#">Policier</a></li>
+                    <li><a href="#">Horreur</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="mx-2">
+                <a
+                  href="#"
+                  data-dropdown-toggle="actorDropdown"
+                  data-dropdown-trigger="hover"
+                  data-dropdown-placement="bottom"
+                  class="text-white uppercase inline-flex items-center"
+                  >Acteurs
+                  <svg
+                    class="w-2.5 h-2.5 ms-3"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 10 6"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="m1 1 4 4 4-4"
+                    />
+                  </svg>
+                </a>
+
+                <!-- Dropdown menu -->
+                <div
+                  id="actorDropdown"
+                  class="z-10 hidden bg-white rounded-lg shadow w-60 dark:bg-gray-700 h-70"
+                >
+                  <div class="p-3">
+                    <label for="actor-search" class="sr-only">Recherche</label>
+                    <div class="relative">
+                      <div
+                        class="absolute inset-y-0 rtl:inset-r-0 start-0 flex items-center ps-3 pointer-events-none"
+                      ></div>
+                      <input
+                        type="text"
+                        id="actor-search"
+                        class="block w-full p-2 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                        placeholder="Nom acteur"
+                      />
+                    </div>
+                  </div>
+                  <ul
+                    class="h-full px-3 pb-3 overflow-y-auto text-sm text-gray-700 dark:text-gray-200"
+                    aria-labelledby="dropdownSearchButton"
+                  >
+                    <li
+                      class="flex items-center ps-2 text-gray-900 rounded hover:bg-gray-100 dark:hover:bg-gray-600"
+                    >
+                      <span>Bruce Willis</span>
+                    </li>
+                    <li
+                      class="flex items-center ps-2 text-gray-900 rounded hover:bg-gray-100 dark:hover:bg-gray-600"
+                    >
+                      <span>Robert De Niro</span>
+                    </li>
+                    <li
+                      class="flex items-center ps-2 text-gray-900 rounded hover:bg-gray-100 dark:hover:bg-gray-600"
+                    >
+                      <span>Denzel Washington</span>
+                    </li>
+                    <li
+                      class="flex items-center ps-2 text-gray-900 rounded hover:bg-gray-100 dark:hover:bg-gray-600"
+                    >
+                      <span>Bruce Willis</span>
+                    </li>
+                    <li
+                      class="flex items-center ps-2 text-gray-900 rounded hover:bg-gray-100 dark:hover:bg-gray-600"
+                    >
+                      <span>Robert De Niro</span>
+                    </li>
+                    <li
+                      class="flex items-center ps-2 text-gray-900 rounded hover:bg-gray-100 dark:hover:bg-gray-600"
+                    >
+                      <span>Denzel Washington</span>
+                    </li>
+                    <li
+                      class="flex items-center ps-2 text-gray-900 rounded hover:bg-gray-100 dark:hover:bg-gray-600"
+                    >
+                      <span>Bruce Willis</span>
+                    </li>
+                    <li
+                      class="flex items-center ps-2 text-gray-900 rounded hover:bg-gray-100 dark:hover:bg-gray-600"
+                    >
+                      <span>Robert De Niro</span>
+                    </li>
+                    <li
+                      class="flex items-center ps-2 text-gray-900 rounded hover:bg-gray-100 dark:hover:bg-gray-600"
+                    >
+                      <span>Denzel Washington</span>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="search-box">
+                <button class="btn-search">
+                  <i class="fas fa-search"></i>
+                </button>
+                <input
+                  type="text"
+                  class="input-search"
+                  placeholder="Recherche..."
+                />
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div id="main">
+        <div id="content">
+          <div id="home">
+            <div class="box">
+              <div class="head">
+                <h2>Plus récents</h2>
+                <p class="text-right"><a href="#">Tous</a></p>
+              </div>
+              <div class="container columns-6">
+                <div class="movie">
+                  <div class="movie-image">
+                    <span class="play"><span class="name">X-MAN</span></span>
+                    <a href="#"
+                      ><img
+                        class="rounded-lg hover:blur"
+                        src="css/images/movie1.jpg"
+                        alt=""
+                    /></a>
+                  </div>
+                  <div class="rating">
+                    <div class="stars">
+                      <div class="stars-in"></div>
+                    </div>
+                    <span class="comments">12</span>
+                  </div>
+                </div>
+                <div class="movie">
+                  <div class="movie-image">
+                    <span class="play"
+                      ><span class="name">SPIDER MAN 2</span></span
+                    >
+                    <a href="#"
+                      ><img
+                        class="rounded-lg hover:blur"
+                        src="css/images/movie2.jpg"
+                        alt=""
+                    /></a>
+                  </div>
+                  <div class="rating">
+                    <div class="stars">
+                      <div class="stars-in"></div>
+                    </div>
+                    <span class="comments">12</span>
+                  </div>
+                </div>
+                <div class="movie">
+                  <div class="movie-image">
+                    <span class="play"
+                      ><span class="name">SPIDER MAN 3</span></span
+                    >
+                    <a href="#"
+                      ><img
+                        class="rounded-lg hover:blur"
+                        src="css/images/movie3.jpg"
+                        alt=""
+                    /></a>
+                  </div>
+                  <div class="rating">
+                    <div class="stars">
+                      <div class="stars-in"></div>
+                    </div>
+                    <span class="comments">12</span>
+                  </div>
+                </div>
+                <div class="movie">
+                  <div class="movie-image">
+                    <span class="play"><span class="name">VALKYRIE</span></span>
+                    <a href="#"
+                      ><img
+                        class="rounded-lg hover:blur"
+                        src="css/images/movie4.jpg"
+                        alt=""
+                    /></a>
+                  </div>
+                  <div class="rating">
+                    <div class="stars">
+                      <div class="stars-in"></div>
+                    </div>
+                    <span class="comments">12</span>
+                  </div>
+                </div>
+                <div class="movie">
+                  <div class="movie-image">
+                    <span class="play"
+                      ><span class="name">GLADIATOR</span></span
+                    >
+                    <a href="#"
+                      ><img
+                        class="rounded-lg hover:blur"
+                        src="css/images/movie5.jpg"
+                        alt=""
+                    /></a>
+                  </div>
+                  <div class="rating">
+                    <div class="stars">
+                      <div class="stars-in"></div>
+                    </div>
+                    <span class="comments">12</span>
+                  </div>
+                </div>
+                <div class="movie last">
+                  <div class="movie-image">
+                    <span class="play"><span class="name">ICE AGE</span></span>
+                    <a href="#"
+                      ><img
+                        class="rounded-lg hover:blur"
+                        src="css/images/movie6.jpg"
+                        alt=""
+                    /></a>
+                  </div>
+                  <div class="rating">
+                    <div class="stars">
+                      <div class="stars-in"></div>
+                    </div>
+                    <span class="comments">12</span>
+                  </div>
+                </div>
+                <div class="cl">&nbsp;</div>
+              </div>
+            </div>
+            <div class="box">
+              <div class="head">
+                <h2>Mieux notés</h2>
+                <p class="text-right"><a href="#">Tous</a></p>
+              </div>
+              <div class="container columns-6">
+                <div class="movie">
+                  <div class="movie-image">
+                    <span class="play"
+                      ><span class="name">TRANSFORMERS</span></span
+                    >
+                    <a href="#"
+                      ><img
+                        class="rounded-lg hover:blur"
+                        src="css/images/movie7.jpg"
+                        alt=""
+                    /></a>
+                  </div>
+                  <div class="rating">
+                    <div class="stars">
+                      <div class="stars-in"></div>
+                    </div>
+                    <span class="comments">12</span>
+                  </div>
+                </div>
+                <div class="movie">
+                  <div class="movie-image">
+                    <span class="play"><span class="name">MAGNETO</span></span>
+                    <a href="#"
+                      ><img
+                        class="rounded-lg hover:blur"
+                        src="css/images/movie8.jpg"
+                        alt=""
+                    /></a>
+                  </div>
+                  <div class="rating">
+                    <div class="stars">
+                      <div class="stars-in"></div>
+                    </div>
+                    <span class="comments">12</span>
+                  </div>
+                </div>
+                <div class="movie">
+                  <div class="movie-image">
+                    <span class="play"
+                      ><span class="name">KUNG FU PANDA</span></span
+                    >
+                    <a href="#"
+                      ><img
+                        class="rounded-lg hover:blur"
+                        src="css/images/movie9.jpg"
+                        alt=""
+                    /></a>
+                  </div>
+                  <div class="rating">
+                    <div class="stars">
+                      <div class="stars-in"></div>
+                    </div>
+                    <span class="comments">12</span>
+                  </div>
+                </div>
+                <div class="movie">
+                  <div class="movie-image">
+                    <span class="play"
+                      ><span class="name">EAGLE EYE</span></span
+                    >
+                    <a href="#"
+                      ><img
+                        class="rounded-lg hover:blur"
+                        src="css/images/movie10.jpg"
+                        alt=""
+                    /></a>
+                  </div>
+                  <div class="rating">
+                    <div class="stars">
+                      <div class="stars-in"></div>
+                    </div>
+                    <span class="comments">12</span>
+                  </div>
+                </div>
+                <div class="movie">
+                  <div class="movie-image">
+                    <span class="play"><span class="name">NARNIA</span></span>
+                    <a href="#"
+                      ><img
+                        class="rounded-lg hover:blur"
+                        src="css/images/movie11.jpg"
+                        alt=""
+                    /></a>
+                  </div>
+                  <div class="rating">
+                    <div class="stars">
+                      <div class="stars-in"></div>
+                    </div>
+                    <span class="comments">12</span>
+                  </div>
+                </div>
+                <div class="movie last">
+                  <div class="movie-image">
+                    <span class="play"
+                      ><span class="name">ANGELS &amp; DEMONS</span></span
+                    >
+                    <a href="#"
+                      ><img
+                        class="rounded-lg hover:blur"
+                        src="css/images/movie12.jpg"
+                        alt=""
+                    /></a>
+                  </div>
+                  <div class="rating">
+                    <div class="stars">
+                      <div class="stars-in"></div>
+                    </div>
+                    <span class="comments">12</span>
+                  </div>
+                </div>
+                <div class="cl">&nbsp;</div>
+              </div>
+            </div>
+            <div class="box">
+              <div class="head">
+                <h2>Plus commentés</h2>
+                <p class="text-right"><a href="#">Tous</a></p>
+              </div>
+              <div class="container columns-6">
+                <div class="movie">
+                  <div class="movie-image">
+                    <span class="play"><span class="name">HOUSE</span></span>
+                    <a href="#"
+                      ><img
+                        class="rounded-lg hover:blur"
+                        src="css/images/movie13.jpg"
+                        alt=""
+                    /></a>
+                  </div>
+                  <div class="rating">
+                    <div class="stars">
+                      <div class="stars-in"></div>
+                    </div>
+                    <span class="comments">12</span>
+                  </div>
+                </div>
+                <div class="movie">
+                  <div class="movie-image">
+                    <span class="play"><span class="name">VACANCY</span></span>
+                    <a href="#"
+                      ><img
+                        class="rounded-lg hover:blur"
+                        src="css/images/movie14.jpg"
+                        alt=""
+                    /></a>
+                  </div>
+                  <div class="rating">
+                    <div class="stars">
+                      <div class="stars-in"></div>
+                    </div>
+                    <span class="comments">12</span>
+                  </div>
+                </div>
+                <div class="movie">
+                  <div class="movie-image">
+                    <span class="play"><span class="name">MIRRORS</span></span>
+                    <a href="#"
+                      ><img
+                        class="rounded-lg hover:blur"
+                        src="css/images/movie15.jpg"
+                        alt=""
+                    /></a>
+                  </div>
+                  <div class="rating">
+                    <div class="stars">
+                      <div class="stars-in"></div>
+                    </div>
+                    <span class="comments">12</span>
+                  </div>
+                </div>
+                <div class="movie">
+                  <div class="movie-image">
+                    <span class="play"
+                      ><span class="name">THE KINGDOM</span></span
+                    >
+                    <a href="#"
+                      ><img
+                        class="rounded-lg hover:blur"
+                        src="css/images/movie16.jpg"
+                        alt=""
+                    /></a>
+                  </div>
+                  <div class="rating">
+                    <div class="stars">
+                      <div class="stars-in"></div>
+                    </div>
+                    <span class="comments">12</span>
+                  </div>
+                </div>
+                <div class="movie">
+                  <div class="movie-image">
+                    <span class="play"><span class="name">MOTIVES</span></span>
+                    <a href="#"
+                      ><img
+                        class="rounded-lg hover:blur"
+                        src="css/images/movie17.jpg"
+                        alt=""
+                    /></a>
+                  </div>
+                  <div class="rating">
+                    <div class="stars">
+                      <div class="stars-in"></div>
+                    </div>
+                    <span class="comments">12</span>
+                  </div>
+                </div>
+                <div class="movie last">
+                  <div class="movie-image">
+                    <span class="play"
+                      ><span class="name">THE PRESTIGE</span></span
+                    >
+                    <a href="#"
+                      ><img
+                        class="rounded-lg hover:blur"
+                        src="css/images/movie18.jpg"
+                        alt=""
+                    /></a>
+                  </div>
+                  <div class="rating">
+                    <div class="stars">
+                      <div class="stars-in"></div>
+                    </div>
+                    <span class="comments">12</span>
+                  </div>
+                </div>
+                <div class="cl">&nbsp;</div>
+              </div>
+            </div>
+          </div>
+          <div id="all" class="hidden">Retrouvez ici bientôt les films classés par genre</div>
+        </div>
+      </div>
+      <div id="footer">
+        <p class="rf">
+          Copyright &copy; 2023 <a href="#">La filmothèque</a> - All Rights
+          Reserved
+        </p>
+        <div style="clear: both"></div>
+      </div>
+    </div>
+    <script src="js/script.js" defer></script>
+  </body>
+</html>
