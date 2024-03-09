@@ -1,1 +1,0 @@
-C:\Users\tom-d\OneDrive\Bureau\TP_RUST\S4\Voting_Machine\v020_spaghetti\target\debug\v020_spaghetti.exe: C:\Users\tom-d\OneDrive\Bureau\TP_RUST\S4\Voting_Machine\v020_spaghetti\src\configuration.rs C:\Users\tom-d\OneDrive\Bureau\TP_RUST\S4\Voting_Machine\v020_spaghetti\src\main.rs
